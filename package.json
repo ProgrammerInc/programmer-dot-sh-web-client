@@ -1,0 +1,98 @@
+{
+  "name": "@programmer/dot-sh-web",
+  "description": "Programmer.SH React.JS Front-End Web Client",
+  "private": true,
+  "version": "0.1.0",
+  "author": {
+    "name": "Programmer Incorporated",
+    "email": "programmer.incorporated@gmail.com",
+    "url": "https://programmer.inc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProgrammerInc/programmer-dot-sh-web-client.git"
+  },
+  "license": "MIT",
+  "homepage": "https://programmer.sh",
+  "bugs": {
+    "url": "https://github.com/ProgrammerInc/programmer-dot-sh-web-client/issues"
+  },
+  "scripts": {
+    "build": "next build",
+    "start": "next start",
+    "start:dev": "next",
+    "storybook": "start-storybook -p 6006",
+    "storybook:build": "build-storybook",
+    "format": "prettier --write \"components/**/*.{js,ts,tsx}\" \"lib/**/*.{js,ts,tsx}\" \"pages/**/*.{js,ts,tsx}\" \"stories/**/*.{js,ts,tsx}\"",
+    "lint": "eslint \"{components,lib,pages}/**/*.{js,ts,tsx}\"",
+    "lint:fix": "npm run lint -- --fix",
+    "lint:staged": "lint-staged",
+    "npm:check": "npm-check --skip-unused",
+    "npm:update": "npm-check --update --skip-unused"
+  },
+  "dependencies": {
+    "@apollo/react-hooks": "^4.0.0",
+    "@apollo/react-ssr": "^4.0.0",
+    "apollo-cache-inmemory": "^1.6.6",
+    "apollo-client": "^2.6.10",
+    "apollo-link-http": "^1.5.17",
+    "apollo-link-ws": "^1.0.20",
+    "graphql": "^15.3.0",
+    "graphql-tag": "^2.11.0",
+    "isomorphic-unfetch": "^3.0.0",
+    "js-cookie": "^2.2.1",
+    "next": "^9.5.3",
+    "next-redux-wrapper": "^6.0.2",
+    "next-with-apollo": "^5.1.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.1",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "sass": "^1.26.11",
+    "subscriptions-transport-ws": "^0.9.18",
+    "use-media": "^1.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@storybook/addon-actions": "^6.0.21",
+    "@storybook/addon-essentials": "^6.0.21",
+    "@storybook/addon-links": "^6.0.21",
+    "@storybook/react": "^6.0.21",
+    "@types/node": "^14.11.1",
+    "@types/react": "^16.9.49",
+    "@types/redux-logger": "^3.0.8",
+    "@typescript-eslint/eslint-plugin": "^4.1.1",
+    "@typescript-eslint/parser": "^4.1.1",
+    "babel-loader": "^8.1.0",
+    "eslint": "^7.9.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-react": "^7.20.6",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
+    "npm-check": "^5.9.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.1.2",
+    "react-is": "^16.13.1",
+    "typescript": "^4.0.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "eslint \"{components,lib,pages}/**/*.{js,ts,tsx}\" --cache --fix"
+  },
+  "keywords": [
+    "programmer inc",
+    "programmer",
+    "incorporated",
+    "news",
+    "reactjs",
+    "front-end",
+    "web",
+    "client"
+  ]
+}
