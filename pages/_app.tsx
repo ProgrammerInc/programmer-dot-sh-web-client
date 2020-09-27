@@ -1,8 +1,6 @@
 import React from 'react';
 import App, { AppContext } from 'next/app';
-import { ApolloProvider } from '@apollo/react-hooks';
 import { wrapper } from '../lib/store';
-import withData from '../lib/withData';
 
 import '../global/styles.global.scss'
 import './styles.scss'
@@ -25,13 +23,11 @@ class WrappedApp extends App<any> {
   };
 
   public render() {
-    const { Component, pageProps, apollo } = this.props;
+    const { Component, pageProps } = this.props;
     return (
-      <ApolloProvider client={apollo}>
-        <Component {...pageProps} />
-      </ApolloProvider>
+      <Component {...pageProps} />
     );
   }
 }
 
-export default wrapper.withRedux(withData(WrappedApp));
+export default wrapper.withRedux(WrappedApp);
